@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<!-- A declaração DOCTYPE declara a versão do HTML usado no documento -->
+<html>
+  <head>
+    <meta charset=UTF-8>        <!-- para caracteres acentuados   -->
+    <title>Mancala</title> 
+    <link rel="stylesheet" href="index.css">
+<!-- texto na decoração da janela -->
+  </head>
+<body bgcolor="white">
+<header>
+  <h1>MANCALA</h1>
+</header>
+<h3>Número de cavidades:</h3>
+<form method="n_de_cavidades" action="index.js">
+  <select name="n_de_cavidades">
+  <option value="um">1</option>
+  <option value="dois">2</option>
+  <option value="tres">3</option>
+  <option value="quatro">4</option>
+  <option value="cinco">5</option>
+  <option value="seis">6</option>
+  </select>
+  </form>
+<h3>Numero inicial de sementes:</h3>
+<form method="n_de_sementes" action="index.js">
+  <select name="n_de_sementes">
+  <option value="um">1</option>
+  <option value="dois">2</option>
+  <option value="tres">3</option>
+  <option value="quatro">4</option>
+  </select>
+  </form>
+<h3>Jogar contra o computador ou outro jogador:</h3>
+<form method="cpu_jogador" action="index.js">
+  <select name="cpu_jogador">
+  <option value="cpu">CPU</option>
+  <option value="jogador">JOGADOR</option>
+  </select>
+  </form>
+<h3>Nivel de dificuldade:</h3>
+<form method="n_de_ia" action="index.js">
+  <select name="n_de_ia">
+  <option value="um">1</option>
+  <option value="dois">2</option>
+  <option value="tres">3</option>
+  <option value="quatro">4</option>
+  </select>
+  </form>
+  <h3>Quem começa:</h3>
+  <input type="button" value="CPU"/>
+  <input type="button" value="Jogador"/>
+  <h3>Identificação</h3>
+<div>
+  <label for="username">Username:</label>
+  <input type="text" id="username" name="username">
+</div>
+<div>
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="password"
+           minlength="8" required>
+</div>
+<input type="submit" value="Sign in">
+  <h3>Instruções</h3>
+  <input type="button" value="Ver"/>
+  <input type="button" value="Ocultar"/>
+  <p>1. Os jogadores sentam-se frente a frente e ficam com o oásis à sua direita. 
+Em seguida, cada um distribui 18 sementes em suas seis cavas (três em cada). 
+No início, o oásis fica vazio.</p>
+<p>2. Quem começa escolhe uma das cavas do seu campo, pega todas as sementes dela e as distribui, 
+uma a uma, nas cavas seguintes, caminhando no sentido anti-horário.</p>
+
+<script src="index.js"></script>
+</body>
+</html>
