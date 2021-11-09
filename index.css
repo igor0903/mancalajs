@@ -5,11 +5,9 @@ body{
 header{
   color: rgb(8, 8, 8);
   text-align: center;
-  width:200px; 
-  height:80px;
   background:  #FFA500;
   border-style: solid;
-
+  border-radius: 15px;
 }
 section{
   background:white;
@@ -20,8 +18,12 @@ section{
   box-shadow: 3px 3px 10px black;
 
 }
+h3{
+  width: 450px;
+}
 div{
-  padding: 8px;
+  padding: 5px;
+  text-align: left;
 }
 footer{
   color: white;

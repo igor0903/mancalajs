@@ -1,3 +1,5 @@
-$('.check input:checkbox').click(function() {
-    $('.check input:checkbox').not(this).prop('checked', false);
-});
+instruc_div = document.getElementById("instrucoes");
+
+function showhide_instruc(d) {
+    d.style.display = (d.style.display !== "none") ? "none" : "block";
+}
