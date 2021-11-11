@@ -9,103 +9,9 @@
     </head>
   
   <header><h1>MANCALA</h1></header>
-
-  <h3>Número de cavidades:</h3>
-    <div id=¨div_n_de_cavidades¨>
-      <form method="n_de_cavidades" action="index.js">
-        <select name="n_de_cavidades">
-        <option value="um">1</option>
-        <option value="dois">2</option>
-        <option value="tres">3</option>
-        <option value="quatro">4</option>
-        <option value="cinco">5</option>
-        <option value="seis">6</option>
-        </select>
-      </form>
-    </div>
-  
-  <h3>Numero inicial de sementes:</h3>
-    <div id=¨div_n_de_sementes¨>
-      <form method="n_de_sementes" action="index.js">
-        <select name="n_de_sementes">
-        <option value="um">1</option>
-        <option value="dois">2</option>
-        <option value="tres">3</option>
-        <option value="quatro">4</option>
-        </select>
-        </form>
-    </div>
-  
-  <h3>Jogar contra o computador ou contra outro jogador:</h3>
-    <div id=¨div_cpu_jogador¨>
-      <form method="cpu_jogador" action="index.js">
-        <select name="cpu_jogador">
-        <option value="cpu">CPU</option>
-        <option value="jogador">JOGADOR</option>
-        </select>
-        </form>
-    </div>
-  
-  <h3>Nivel de dificuldade:</h3>
-    <div id=¨div_n_de_ia¨>
-      <form method="n_de_ia" action="index.js">
-        <select name="n_de_ia">
-        <option value="um">1</option>
-        <option value="dois">2</option>
-        <option value="tres">3</option>
-        <option value="quatro">4</option>
-        </select>
-        </form>
-    </div>
-  
-  <h3>Quem começa:</h3>
-    <div id=¨div_quem_comeca¨>
-      <input type="button" value="CPU"/>
-      <input type="button" value="Jogador"/>
-    </div>
-  <h3>Identificação</h3>
-    <div id=¨div_username¨>
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username">
-    </div>
-    <div id=¨div_password¨>
-      <label for="pass">Password:</label>
-      <input type="password" id="pass" name="password"
-            minlength="8" required>
-    </div>
-    <div>
-      <input type="submit" value="Sign in">
-    </div>
-      
-  
-  <h3>Instruções</h3>
-    <button id="btnInstruc_view" onclick="showhide_instruc(instruc_div)">Ocultar / Mostrar </button>
-    <div id="instrucoes">
-        <p>1. Os jogadores sentam-se frente a frente e ficam com o oásis à sua direita. 
-        Em seguida, cada um distribui 18 sementes em suas seis cavas (três em cada). 
-        No início, o oásis fica vazio.</p>
-        <p>2. Quem começa escolhe uma das cavas do seu campo, pega todas as sementes dela e as distribui, 
-        uma a uma, nas cavas seguintes, caminhando no sentido anti-horário.</p>
-        
-    </div>
-  
-  
-  <h3>Iniciar Jogo:</h3>
-    <div>
-      <input type="button" value="Iniciar"/>
-    </div>
-  
-  
-  <h3>Tabuleiro:</h3>
-    <div>
-      <input type="image" src="images.jpeg">
-      <p><input type="button" value="Desistir"/></p>
-    </div>
-  
   <h3>Classificações:</h3>
-    <div>
-      <input type="button" value="Ver"/>
-      <input type="button" value="Ocultar"/>
+  <button id="button" onclick="showhide_instruc(classificacoes_div)"> Ver / Ocultar </button>
+      <div id="classifacao">
       <table border="2">
         <tr>
             <th>Nome</th>
@@ -120,8 +26,79 @@
             <td>26</td>
         </tr>
       </table>
+  </div>
+
+  <div id=¨div_user¨>
+    <h3>Identificação</h3>
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username">
+    <label for="pass">Password:</label>
+    <input type="password" id="pass" name="password"
+          minlength="8" required>
+    <input type="submit" value="Sign in">
+</div> 
+<h3>Instruções</h3>
+  <button id="btnInstruc_view" onclick="showhide_instruc(instruc_div)">Ocultar / Mostrar </button>
+  <div id="instrucoes">
+      <p>1. Os jogadores sentam-se frente a frente e ficam com o oásis à sua direita. 
+      Em seguida, cada um distribui 18 sementes em suas seis cavas (três em cada). 
+      No início, o oásis fica vazio.</p>
+      <p>2. Quem começa escolhe uma das cavas do seu campo, pega todas as sementes dela e as distribui, 
+      uma a uma, nas cavas seguintes, caminhando no sentido anti-horário.</p>  
+  </div>
+
+  <div id=¨div_n_de_cavidades¨>
+    <h3>Número de cavidades:</h3>
+  
+      <form method="n_de_cavidades" action="index.js">
+        <select name="n_de_cavidades">
+        <option value="um">1</option>
+        <option value="dois">2</option>
+        <option value="tres">3</option>
+        <option value="quatro">4</option>
+        <option value="cinco">5</option>
+        <option value="seis">6</option>
+        </select>
+      </form>
+  </div>
+  
+  <div id=¨div_n_de_sementes¨>
+    <h3>Numero inicial de sementes:</h3>  
+    <input type="radio" name="sementes" value="oito"  checked="checked"/>8
+    <input type="radio" name="sementes" value="dez"/>10
+    <input type="radio" name="sementes" value="doze"/>12
+    <input type="radio" name="sementes" value="catorze"/>14
+  </div>
+  
+  <div id=¨div_cpu_jogador¨>
+    <h3>Jogar contra o computador ou contra outro jogador:</h3>
+      <input type="radio" name="cpu_jogador" value="cpu" checked="checked"/>CPU
+      <input type="radio" name="cpu_jogador" value="jogador"/>Jogador
+  </div>
+  
+  <div id=¨div_n_de_ia¨>
+    <h3>Nivel de dificuldade:</h3>
+    <input type="radio" name="nivel" value="facil"  checked="checked"/>Fácil
+    <input type="radio" name="nivel" value="medio"/>Médio
+    <input type="radio" name="nivel" value="dificil"/>Difícil
+    <input type="radio" name="nivel" value="desafio"/>Desafio
+  </div>
+  <div id=¨div_quem_comeca¨>
+    <h3>Quem começa:</h3>
+    <input type="radio" name="cpu_eu" value="eu"  checked="checked"/>Eu
+    <input type="radio" name="cpu_eu" value="cpu"/>CPU
+  </div>     
+  
+  <h3>Iniciar Jogo:</h3>
+  <button id="button_start" onclick="showhide_instruc(dificuldade_ia_div)"> Iniciar o Jogo </button>
+    <div>
     </div>
   
-  <script src="index.js"></script>
+  <div id="tabuleiro">
+    <h3>Tabuleiro:</h3>    
+      <input type="image" src="images.jpeg">
+      <p><input type="button" value="Desistir"/></p>
+  </div>
   </body>
+  <script src="index.js"></script>
 </html>
