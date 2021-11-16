@@ -7,9 +7,7 @@ const quem_comeca_div = document.getElementById("div_quem_comeca");
 const id_div = document.getElementById("div_user");
 const instruc_div = document.getElementById("instrucoes");
 const tabuleiro_div = document.getElementById("tabuleiro");
-
-
-const btn_start = document.getElementById("button_start");
+const config_div = document.getElementById("config");
 
 tabuleiro_div.style.display = "none";
 instruc_div.style.display = "none";
@@ -18,12 +16,7 @@ classificacoes_div.style.display = "none";
 function showhide_instruc(d) {
     d.style.display = (d.style.display !== "none") ? "none" : "block";
 }
-btn_start.onclick = function () {
-    n_de_cavidades_div.style.display = "none";
-    n_sementes_div.style.display = "none";
-    cpu_jogador_div.style.display = "none";
-    dificuldade_ia_div.style.display = "none";
-    quem_comeca_div.style.display = "none";
-    id_div.style.display = "none";
-    tabuleiro_div.style.display = "block";
-};
+function showhide_startgame(d) {
+    d.style.display = (d.style.display !== "none") ? "none" : "block";
+    tabuleiro_div.style.display = (tabuleiro_div.style.display !== "none") ? "none" : "block";
+}

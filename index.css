@@ -16,3 +16,9 @@ h3{
 div{
   padding: 5px;
 }
+#board {
+  background-image: url("tabuleiromadeira.png");
+  height: 100px;
+  width: 240px;
+  border-radius: 20px;
+}
